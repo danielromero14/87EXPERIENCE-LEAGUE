@@ -8,10 +8,10 @@
 - Layout concentrado: Ancho máximo de `840px` en contenido principal y footer para mejorar la legibilidad en monitores anchos.
 - Identidad visual: Integración de logos oficiales (`imagen/logo.png` en sección media, `imagen/footer_illustration.png` y `imagen/footer_logo.png` en footer).
 - Cinta de claims con loop infinito, fuente Contrail One y color #ef80d4, sin espacios ni cortes.
-- Sección de precios: etapas separadas (`Etapa 1`, `Etapa 2` en #146ccb), nombres en Contrail One y color #ff77d7, helpers en Poppins (inscripción/fechas en dos líneas) y precios debajo; nota de términos centrada en #146ccb.
-- Formulario de inscripción: Encabezado renovado con texto descriptivo dinámico y la ilustración oficial ("mano señalando") para guiar al usuario.
-- Formulario de inscripción conectado al endpoint de Apps Script; validación de cliente, honeypot, soporte para adjunto (<2MB png/jpg/pdf) convertido a base64.
-- Optimización móvil: Botón CTA "Inscribir equipo" pegajoso (sticky) y reorganización de tabla de precios en modo columna.
+- Fase actual: Pre-inscripción activa. Sección de precios temporalmente oculta (comentada en HTML) y campo de adjuntos removido del formulario.
+- Formulario de pre-inscripción: Encabezado renovado con texto descriptivo dinámico y la ilustración oficial ("mano señalando") para guiar al usuario.
+- Formulario conectado al endpoint de Apps Script; validación de cliente, honeypot.
+- Optimización móvil: Botón CTA "Pre-inscribir equipo" pegajoso (sticky) y reorganización de tabla de precios en modo columna.
 - Galería visual: Integración de 3 fotos reales de alta calidad (`imagen/gallery_1.jpg`, `etc`) con efecto de rotación y marco premium.
 - Estilos reestructurados en `index.css`; tipografías añadidas (Contrail One, Poppins, Inter/Bungee).
 

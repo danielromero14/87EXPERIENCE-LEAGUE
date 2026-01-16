@@ -65,7 +65,7 @@
       <div class="card">
         <h2 class="text-center">Con tu participación serás parte de la transformación<br>y crecimiento del deporte en el
           país</h2>
-        <p class="text-center">En esta página encontrarás la información necesaria para reservar el cupo de tu equipo:
+        <!-- <p class="text-center">En esta página encontrarás la información necesaria para reservar el cupo de tu equipo:
         </p>
         <div class="pricing">
           <div class="price-row">
@@ -99,7 +99,7 @@
             Separa el cupo con $2.000.000 (Hacen parte del saldo total x equipo)<br>
             **Aplican términos y condiciones
           </p>
-        </div>
+        </div> -->
       </div>
     </section>
 
@@ -107,7 +107,7 @@
       <div class="card form-card">
         <div class="form-header">
           <div class="form-header-text">
-            <h2>Diligencia<br>los siguientes datos para<br>completar la inscripción<br>de tu equipo</h2>
+            <h2>Diligencia<br>los siguientes datos para<br>completar la pre-inscripción<br>de tu equipo</h2>
           </div>
           <img src="imagen/form_illustration.png" alt="" class="form-header-illustration" />
         </div>
@@ -146,14 +146,9 @@
             <div class="error" id="err-email">Ingresa un correo válido.</div>
           </div>
 
-          <div>
-            <label for="receipt">Foto del comprobante (máximo 2MB, pdf/png/jpg)</label>
-            <input id="receipt" name="receipt" class="input" type="file"
-              accept="image/png, image/jpeg, application/pdf" />
-            <div class="error" id="err-receipt">Archivo inválido o demasiado grande.</div>
-          </div>
+          <!-- Receipt section removed for pre-registration phase -->
 
-          <button class="cta" type="submit" id="submit-btn">Enviar inscripción</button>
+          <button class="cta" type="submit" id="submit-btn">Enviar pre-inscripción</button>
           <div class="status" id="form-status" aria-live="polite"></div>
         </form>
       </div>
@@ -161,7 +156,7 @@
   </main>
 
   <button class="cta cta-sticky"
-    onclick="document.getElementById('registro').scrollIntoView({behavior:'smooth'});">Inscribir equipo</button>
+    onclick="document.getElementById('registro').scrollIntoView({behavior:'smooth'});">Pre-inscribir equipo</button>
 
   <footer>
     <div class="footer-content">
@@ -207,7 +202,7 @@
         const json = await res.json();
         if (!json.ok) throw new Error('No se pudo guardar');
 
-        statusEl.textContent = 'Inscripción enviada. Te contactaremos pronto.';
+        statusEl.textContent = 'Pre-inscripción enviada. Te contactaremos pronto.';
         statusEl.style.color = 'green';
         form.reset();
       } catch (err) {
@@ -216,7 +211,7 @@
         console.error(err);
       } finally {
         submitBtn.disabled = false;
-        submitBtn.textContent = 'Enviar inscripción';
+        submitBtn.textContent = 'Enviar pre-inscripción';
       }
     });
 

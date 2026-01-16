@@ -194,6 +194,27 @@ section {
 }
 
 /* --- Form --- */
+.form-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.form-header-text h2 {
+    text-align: left !important;
+    font-size: clamp(18px, 4vw, 24px) !important;
+    margin-bottom: 0 !important;
+    line-height: 1.1 !important;
+}
+
+.form-header-illustration {
+    max-width: 140px;
+    height: auto;
+    filter: drop-shadow(0 5px 15px rgba(29, 111, 213, 0.1));
+}
+
 .form-card form {
     display: grid;
     gap: 20px;

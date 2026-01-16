@@ -366,6 +366,15 @@ label {
     box-shadow: var(--shadow);
     transform: rotate(var(--rot, -2deg));
     transition: transform 0.3s ease;
+    overflow: hidden;
+    border: 6px solid #fff;
+}
+
+.photo-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .photo-card:hover {

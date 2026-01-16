@@ -11,6 +11,7 @@
 - Sección de precios: etapas separadas (`Etapa 1`, `Etapa 2` en #146ccb), nombres en Contrail One y color #ff77d7, helpers en Poppins (inscripción/fechas en dos líneas) y precios debajo; nota de términos centrada en #146ccb.
 - Formulario de inscripción conectado al endpoint de Apps Script; validación de cliente, honeypot, soporte para adjunto (<2MB png/jpg/pdf) convertido a base64.
 - Optimización móvil: Botón CTA "Inscribir equipo" pegajoso (sticky) y reorganización de tabla de precios en modo columna.
+- Galería visual: Integración de 3 fotos reales de alta calidad (`imagen/gallery_1.jpg`, `etc`) con efecto de rotación y marco premium.
 - Estilos reestructurados en `index.css`; tipografías añadidas (Contrail One, Poppins, Inter/Bungee).
 
 ## Backend (Apps Script)

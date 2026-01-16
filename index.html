@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experience League 87</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bungee:wght@400&family=Inter:wght@400;600;800&family=Contrail+One&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <header class="hero">
+    <img src="imagen/hero_illustration.png" alt="" class="hero-bg-image" />
+    <div class="hero-content">
+      <p class="hero-eyebrow">Estás a punto de ser parte</p>
+      <h1 class="hero-title">Del mejor festival de<br>Ultimate en Colombia.</h1>
+    </div>
+  </header>
+
+
+  <div class="claim-list" aria-label="Características del festival">
+    <div class="claim-track">
+      <span class="claim-item">Alto nivel</span>
+      <span class="claim-item">Parche de amigos</span>
+      <span class="claim-item">Festival de música</span>
+      <span class="claim-item">Torneo de alto nivel</span>
+      <span class="claim-item">Festival deportivo</span>
+      <span class="claim-item">Alto nivel</span>
+      <span class="claim-item">Parche de amigos</span>
+      <span class="claim-item">Festival de música</span>
+      <span class="claim-item">Torneo de alto nivel</span>
+      <span class="claim-item">Festival deportivo</span>
+      <span class="claim-item">Alto nivel</span>
+      <span class="claim-item">Parche de amigos</span>
+      <span class="claim-item">Festival de música</span>
+      <span class="claim-item">Torneo de alto nivel</span>
+      <span class="claim-item">Festival deportivo</span>
+      <span class="claim-item">Alto nivel</span>
+      <span class="claim-item">Parche de amigos</span>
+      <span class="claim-item">Festival de música</span>
+      <span class="claim-item">Torneo de alto nivel</span>
+      <span class="claim-item">Festival deportivo</span>
+    </div>
+  </div>
+
+  <main>
+    <section class="gallery">
+      <div class="strokes"></div>
+      <div class="gallery-grid">
+        <div class="photo-card"></div>
+        <div class="photo-card"></div>
+        <div class="photo-card"></div>
+      </div>
+      <div class="logo-container">
+        <img src="imagen/logo.png" alt="Experience League 87 Logo" class="main-logo" />
+      </div>
+    </section>
+
+    <section>
+      <div class="card">
+        <h2 class="text-center">Con tu participación serás parte de la transformación<br>y crecimiento del deporte en el
+          país</h2>
+        <p class="text-center">En esta página encontrarás la información necesaria para reservar el cupo de tu equipo:
+        </p>
+        <div class="pricing">
+          <div class="price-row">
+            <div class="price-left">
+              <div class="tag">
+                <span class="tag-stage">Etapa 1</span>
+                <span class="tag-name">Early Grid Experience</span>
+              </div>
+            </div>
+            <div class="price-right">
+              <div class="price-helper">Inscripción temprana</div>
+              <div class="price-helper"><strong>del 16 de enero al 28 de febrero</strong></div>
+              <div class="price">390.000 COP</div>
+            </div>
+          </div>
+          <div class="price-row">
+            <div class="price-left">
+              <div class="tag">
+                <span class="tag-stage">Etapa 2</span>
+                <span class="tag-name">Final Lap</span>
+              </div>
+            </div>
+            <div class="price-right">
+              <div class="price-helper">Inscripción regular</div>
+              <div class="price-helper"><strong>del 1 de marzo al 3 de abril</strong></div>
+              <div class="price">490.000 COP</div>
+            </div>
+          </div>
+          <p class="helper terms-note">
+            **El valor depende del momento en que el equipo confirme su inscripción.<br>
+            Separa el cupo con $2.000.000 (Hacen parte del saldo total x equipo)<br>
+            **Aplican términos y condiciones
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="registro">
+      <div class="card form-card">
+        <h2>Inscripción de equipo</h2>
+        <p class="helper">Diligencia los datos para completar la inscripción. Campos obligatorios.</p>
+        <form id="lead-form" novalidate>
+          <input type="text" name="website" autocomplete="off" tabindex="-1" aria-hidden="true"
+            style="position:absolute; left:-5000px; height:0; width:0; opacity:0;" />
+
+          <div>
+            <label for="team">Nombre del equipo</label>
+            <input id="team" name="team" class="input" required />
+            <div class="error" id="err-team">Campo obligatorio.</div>
+          </div>
+
+          <div>
+            <label for="category">Categoría</label>
+            <input id="category" name="category" class="input" required />
+            <div class="error" id="err-category">Campo obligatorio.</div>
+          </div>
+
+          <div>
+            <label for="captain">Nombre del capitán del equipo</label>
+            <input id="captain" name="captain" class="input" required />
+            <div class="error" id="err-captain">Campo obligatorio.</div>
+          </div>
+
+          <div>
+            <label for="phone">Número de contacto</label>
+            <input id="phone" name="phone" class="input" required inputmode="tel" />
+            <div class="error" id="err-phone">Campo obligatorio.</div>
+          </div>
+
+          <div>
+            <label for="email">Correo electrónico</label>
+            <input id="email" name="email" class="input" required type="email" />
+            <div class="error" id="err-email">Ingresa un correo válido.</div>
+          </div>
+
+          <div>
+            <label for="receipt">Foto del comprobante (máximo 2MB, pdf/png/jpg)</label>
+            <input id="receipt" name="receipt" class="input" type="file"
+              accept="image/png, image/jpeg, application/pdf" />
+            <div class="error" id="err-receipt">Archivo inválido o demasiado grande.</div>
+          </div>
+
+          <button class="cta" type="submit" id="submit-btn">Enviar inscripción</button>
+          <div class="status" id="form-status" aria-live="polite"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <button class="cta cta-sticky"
+    onclick="document.getElementById('registro').scrollIntoView({behavior:'smooth'});">Inscribir equipo</button>
+
+  <footer>
+    <div class="footer-content">
+      <img src="imagen/footer_illustration.png" alt="" class="footer-illustration" />
+      <div class="footer-links">Política de privacidad · Términos y condiciones · Prensa</div>
+      <img src="imagen/footer_logo.png" alt="87 Experience League Logo" class="footer-logo" />
+    </div>
+  </footer>
+
+  <script type="module">
+    const endpoint = 'https://script.google.com/macros/s/AKfycbzAatNXap_HsvMlZT9j4UIYJxSNf7-gPWI19SDvImOBTBeNIqnNfMNyF5wIUMPnhHmwDA/exec';
+    const form = document.getElementById('lead-form');
+    const statusEl = document.getElementById('form-status');
+    const submitBtn = document.getElementById('submit-btn');
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      statusEl.textContent = '';
+      hideErrors();
+
+      const data = new FormData(form);
+      if (data.get('website')) return; // honeypot
+
+      const errors = validate(data);
+      if (errors.length) {
+        errors.forEach((id) => showError(id));
+        statusEl.textContent = 'Revisa los campos obligatorios.';
+        statusEl.style.color = '#c0392b';
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Enviando...';
+
+      try {
+        const payload = await buildPayload(data);
+        const res = await fetch(endpoint, {
+          method: 'POST',
+          body: JSON.stringify(payload)
+        });
+
+        if (!res.ok) throw new Error('Error de red');
+        const json = await res.json();
+        if (!json.ok) throw new Error('No se pudo guardar');
+
+        statusEl.textContent = 'Inscripción enviada. Te contactaremos pronto.';
+        statusEl.style.color = 'green';
+        form.reset();
+      } catch (err) {
+        statusEl.textContent = 'Hubo un problema enviando el formulario. Intenta de nuevo.';
+        statusEl.style.color = '#c0392b';
+        console.error(err);
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Enviar inscripción';
+      }
+    });
+
+    function validate(fd) {
+      const errs = [];
+      if (!fd.get('team')) errs.push('err-team');
+      if (!fd.get('category')) errs.push('err-category');
+      if (!fd.get('captain')) errs.push('err-captain');
+      if (!fd.get('phone')) errs.push('err-phone');
+      const email = fd.get('email');
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) errs.push('err-email');
+
+      const file = fd.get('receipt');
+      if (file && file.size > 0) {
+        const allowed = ['image/png', 'image/jpeg', 'application/pdf'];
+        if (!allowed.includes(file.type) || file.size > 2 * 1024 * 1024) {
+          errs.push('err-receipt');
+        }
+      }
+      return errs;
+    }
+
+    function hideErrors() {
+      document.querySelectorAll('.error').forEach((el) => (el.style.display = 'none'));
+    }
+    function showError(id) {
+      const el = document.getElementById(id);
+      if (el) el.style.display = 'block';
+    }
+
+    async function buildPayload(fd) {
+      const payload = {
+        team: fd.get('team')?.trim(),
+        category: fd.get('category')?.trim(),
+        captain: fd.get('captain')?.trim(),
+        phone: fd.get('phone')?.trim(),
+        email: fd.get('email')?.trim(),
+      };
+
+      const file = fd.get('receipt');
+      if (file && file.size > 0) {
+        payload.receiptName = file.name;
+        payload.receiptType = file.type;
+        payload.receiptSize = file.size;
+        payload.receiptBase64 = await fileToBase64(file);
+      }
+      return payload;
+    }
+
+    function fileToBase64(file) {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(reader.result.split(',')[1]);
+        reader.onerror = reject;
+        reader.readAsDataURL(file);
+      });
+    }
+  </script>
+</body>
+
+</html>

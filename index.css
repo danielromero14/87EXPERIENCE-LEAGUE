@@ -1,0 +1,444 @@
+:root {
+    --blue: #1d6fd5;
+    --orange: #f85b1e;
+    --yellow: #f4c400;
+    --pink: #ff5fb2;
+    --beige: #fae8dc;
+    --dark: #0f0f0f;
+    --text: #0e2b5c;
+    --border: #b7d6ff;
+    --shadow: 0 18px 35px rgba(13, 63, 135, 0.14);
+    --radius: 26px;
+    --glass: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.4);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: var(--beige);
+    color: var(--text);
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+/* --- Hero Section --- */
+header.hero {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1200 / 448;
+    /* Matches the approximate aspect ratio of the illustration */
+    min-height: 280px;
+    background: #1d6fd5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0;
+}
+
+/* Background patterns/shapes to mimic the image spirit */
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 15% 15%, rgba(255, 255, 255, 0.1) 0%, transparent 40%),
+        radial-gradient(circle at 85% 85%, rgba(255, 255, 255, 0.1) 0%, transparent 40%);
+    z-index: 0;
+}
+
+/* Background illustration from the image provided (without text) */
+.hero-bg-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Recovers full width to remove side margins */
+    object-position: center;
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    max-width: 800px;
+    color: #fff;
+    /* Stronger shadow for readability over the full illustration */
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+.hero-eyebrow {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: clamp(14px, 2vw, 18px);
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+.hero-title {
+    font-family: 'Contrail One', 'Bungee', sans-serif;
+    font-size: clamp(32px, 6vw, 64px);
+    line-height: 1.1;
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: -0.02em;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Decorative "Hands" or "Snakes" from the image */
+/* Since we want it identical, we use the image as background but hide the original img tag */
+/* For a truly premium feel, we'd slice them, but let's stick to the request of "igual" */
+
+.claim-list {
+    position: relative;
+    overflow: hidden;
+    background: var(--blue);
+    color: #fff;
+    padding: 12px 0;
+    border-top: 3px solid #113f7a;
+    border-bottom: 3px solid #113f7a;
+    z-index: 20;
+    font-family: 'Contrail One', sans-serif;
+}
+
+.claim-track {
+    display: flex;
+    width: max-content;
+    animation: marquee 25s linear infinite;
+    display: flex;
+    gap: 50px;
+    width: max-content;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    animation: marquee 40s linear infinite;
+    color: #ef80d4;
+    font-family: 'Contrail One', sans-serif;
+    font-size: 1.2rem;
+}
+
+.claim-seq {
+    display: flex;
+    gap: 30px;
+    font-weight: 700;
+}
+
+.claim-item {
+    flex: 0 0 auto;
+    font-family: 'Contrail One', sans-serif;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+main {
+    max-width: 840px;
+    margin: 0 auto;
+    padding: 40px 20px 100px;
+}
+
+section {
+    margin-bottom: 60px;
+}
+
+/* --- Cards --- */
+.card {
+    background: var(--glass);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: var(--radius);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--shadow);
+    padding: clamp(24px, 5vw, 40px);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h2 {
+    margin-bottom: 20px;
+    font-family: 'Contrail One', sans-serif;
+    color: var(--blue);
+    font-size: clamp(20px, 3.5vw, 28px);
+    text-transform: uppercase;
+    font-style: italic;
+    line-height: 1.2;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.card p.text-center {
+    margin-bottom: 30px;
+    opacity: 0.9;
+}
+
+/* --- Form --- */
+.form-card form {
+    display: grid;
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+label {
+    font-weight: 700;
+    color: var(--blue);
+    font-size: 14px;
+}
+
+.input {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid var(--border);
+    border-radius: 16px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.8);
+    transition: all 0.2s ease;
+    font-family: 'Inter', sans-serif;
+}
+
+.input:focus {
+    outline: none;
+    border-color: var(--blue);
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(29, 111, 213, 0.1);
+}
+
+/* --- Pricing --- */
+.pricing {
+    display: grid;
+    gap: 16px;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    border: 2px solid var(--border);
+    border-radius: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.5);
+    flex-wrap: wrap;
+}
+
+.price-left {
+    flex: 1;
+}
+
+.price-right {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: flex-end;
+    text-align: right;
+    min-width: 200px;
+}
+
+.price-helper {
+    color: #146ccb;
+    font-size: 13px;
+    line-height: 1.4;
+    font-weight: 600;
+    font-family: 'Poppins', 'Inter', sans-serif;
+}
+
+.tag {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    text-transform: uppercase;
+}
+
+.tag-stage {
+    color: #146ccb;
+    font-weight: 800;
+    font-family: 'Poppins', 'Inter', sans-serif;
+    font-size: 13px;
+    letter-spacing: 0.03em;
+}
+
+.tag-name {
+    color: #ff77d7;
+    font-family: 'Contrail One', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 0.01em;
+}
+
+.price {
+    color: var(--pink);
+    font-weight: 900;
+    font-size: 24px;
+    font-family: 'Contrail One', sans-serif;
+}
+
+.terms-note {
+    margin-top: 4px;
+    color: #146ccb;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.4;
+    font-family: 'Poppins', 'Inter', sans-serif;
+}
+
+/* --- Buttons --- */
+.cta {
+    background: linear-gradient(135deg, var(--orange), #ff8c42);
+    border: none;
+    border-radius: 18px;
+    color: #fff;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 18px 24px;
+    cursor: pointer;
+    letter-spacing: 0.05em;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 25px rgba(248, 91, 30, 0.3);
+    font-family: 'Bungee', sans-serif;
+    font-size: 16px;
+}
+
+.cta:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(248, 91, 30, 0.4);
+}
+
+.cta:active {
+    transform: translateY(0);
+}
+
+.cta:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.cta-sticky {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 40px);
+    max-width: 400px;
+    z-index: 100;
+    display: none;
+}
+
+/* --- Gallery --- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.photo-card {
+    aspect-ratio: 1/1;
+    background: linear-gradient(135deg, #d8e9ff, #f8fbff);
+    border-radius: 22px;
+    box-shadow: var(--shadow);
+    transform: rotate(var(--rot, -2deg));
+    transition: transform 0.3s ease;
+}
+
+.photo-card:hover {
+    transform: rotate(0) scale(1.05);
+    z-index: 5;
+}
+
+.logo-container {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px 0;
+}
+
+.main-logo {
+    max-width: 320px;
+    width: 80%;
+    height: auto;
+    filter: drop-shadow(0 5px 15px rgba(29, 111, 213, 0.2));
+}
+
+/* --- Footer --- */
+footer {
+    background: var(--dark);
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 840px;
+    margin: 0 auto;
+}
+
+.footer-illustration {
+    max-width: 90px;
+    height: auto;
+}
+
+.footer-logo {
+    max-width: 70px;
+    height: auto;
+    opacity: 0.9;
+}
+
+.footer-links {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: 300px;
+    }
+
+    .price-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .price-right {
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .cta-sticky {
+        display: block;
+    }
+
+    body {
+        padding-bottom: 80px;
+    }
+}
